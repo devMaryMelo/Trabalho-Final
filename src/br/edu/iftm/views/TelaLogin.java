@@ -61,7 +61,7 @@ public class TelaLogin extends PanelPrincipal
 
                 if((usuario == null) || (usuario.isEmpty()) || (senha.isEmpty()))
                 {
-                    JOptionPane.showMessageDialog(null, "Informe o usuario e a senha", "Dados inválidos", 
+                    JOptionPane.showMessageDialog(null, "Informe o usuário e a senha", "Dados inválidos", 
                                                     JOptionPane.ERROR_MESSAGE);
                 }
                 else
