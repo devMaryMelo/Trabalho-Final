@@ -2,13 +2,14 @@ package br.edu.iftm.views;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import br.edu.iftm.views.components.Imagem;
 import br.edu.iftm.views.components.PanelPrincipal;
 
 import java.awt.event.*;
 import java.awt.CardLayout;
+import java.awt.Cursor;
 
 public class TelaPrincipal extends PanelPrincipal
 {
@@ -17,19 +18,20 @@ public class TelaPrincipal extends PanelPrincipal
 
     public TelaPrincipal(JPanel telas, JFrame janela)
     {
-       super(telas, janela);
+        super(telas, janela);
 
-        JLabel lblMessage = new JLabel("You logged in");
+        Imagem btnLogout = new Imagem("logout.png");
+        btnLogout.setBounds(10, 0, 64, 64);
+        btnLogout.setToolTipText("Logout");
+        btnLogout.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
-        JButton botao = new JButton("Logoff");
-        botao.addActionListener(this);
-
-        this.add(lblMessage);
-        this.add(botao);
-    }
-
-    public void executarBotao(ActionEvent e)
-    {
-        trocarTela("Login");
+        btnLogout.addMouseListener(new MouseAdapter()
+        {
+            public void mouseClicked(MouseEvent e)
+            {
+                trocarTela("Login");
+            }
+        });
+        this.add(btnLogout);
     }
 }
