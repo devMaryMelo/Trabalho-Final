@@ -23,12 +23,15 @@ public class PanelPrincipal extends JPanel implements ActionListener
         this.setBackground(Color.decode("#190710"));
         this.setLayout(null);
 
-        Imagem botaoClose = new Imagem("close_white.png");
-        Imagem botaoMinimize = new Imagem("minimize_white.png");
-        botaoClose.setBounds(1340, 0, 24, 24);
-        botaoMinimize.setBounds(1320, 0, 24, 24);
+        Imagem btnClose = new Imagem("close_white.png");
+        btnClose.setBounds(1340, 0, 24, 24);
+        btnClose.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
-        botaoClose.addMouseListener(new MouseAdapter()
+        Imagem btnMinimize = new Imagem("minimize_white.png");
+        btnMinimize.setBounds(1320, 0, 24, 24);
+        btnMinimize.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        btnClose.addMouseListener(new MouseAdapter()
         {
             public void mouseClicked(MouseEvent e)
             {
@@ -36,7 +39,7 @@ public class PanelPrincipal extends JPanel implements ActionListener
             }
         });
         
-        botaoMinimize.addMouseListener(new MouseAdapter()
+        btnMinimize.addMouseListener(new MouseAdapter()
         {
             public void mouseClicked(MouseEvent e)
             {
@@ -44,8 +47,8 @@ public class PanelPrincipal extends JPanel implements ActionListener
             }
         });
 
-        this.add(botaoClose);
-        this.add(botaoMinimize);
+        this.add(btnClose);
+        this.add(btnMinimize);
     }
 
     @Override
