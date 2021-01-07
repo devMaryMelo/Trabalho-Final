@@ -13,5 +13,4 @@ public class Botao extends JButton
         this.setFocusPainted(false);
         this.setBorderPainted(false);
     }
-    
 }
