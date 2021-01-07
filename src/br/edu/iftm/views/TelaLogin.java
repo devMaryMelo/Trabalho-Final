@@ -8,6 +8,7 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
 import java.awt.Color;
+import java.awt.Cursor;
 import java.awt.event.*;
 
 import br.edu.iftm.views.components.Botao;
@@ -16,7 +17,7 @@ import br.edu.iftm.views.components.PanelPrincipal;
 
 public class TelaLogin extends PanelPrincipal
 {
-    private Botao botaoLogin;
+    private Botao btnLogin;
 
     public TelaLogin(JPanel telas, JFrame janela)
     {
@@ -35,8 +36,9 @@ public class TelaLogin extends PanelPrincipal
         JPasswordField password = new JPasswordField();
         password.setBounds(630, 370, 200, 20);
 
-        Botao botaoLogin = new Botao("Login");
-        botaoLogin.addActionListener(this);
+        Botao btnLogin = new Botao("Login");
+        btnLogin.addActionListener(this);
+        btnLogin.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
         Imagem imgCafeteria = new Imagem("cafeteria.png");
         imgCafeteria.setBounds(500, 0, 440, 199);
@@ -48,11 +50,11 @@ public class TelaLogin extends PanelPrincipal
         this.add(txtUsuario);
         this.add(lblSenha);
         this.add(password);
-        this.add(botaoLogin);
+        this.add(btnLogin);
         this.add(imgCafeteria);
         this.add(imgCoffee);
 
-        botaoLogin.addActionListener(new ActionListener()
+        btnLogin.addActionListener(new ActionListener()
         {
             @Override
             public void actionPerformed(ActionEvent e) {
