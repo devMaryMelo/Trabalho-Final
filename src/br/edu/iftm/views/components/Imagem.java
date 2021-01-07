@@ -11,6 +11,5 @@ public class Imagem extends JLabel
         ImageIcon icon = new ImageIcon(Imagem.class.getResource("/imagens/" + nome));
         setIcon(icon);
         repaint();
-
     }
 }
