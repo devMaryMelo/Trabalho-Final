@@ -13,12 +13,14 @@ import java.awt.event.*;
 import java.awt.CardLayout;
 import java.awt.Cursor;
 
-public class TelaPrincipal extends PanelPrincipal {
+public class TelaPrincipal extends PanelPrincipal 
+{
     private JPanel telas;
     private CardLayout controlador;
     private static JFrame cardapio;
 
-    public TelaPrincipal(JPanel telas, JFrame janela) {
+    public TelaPrincipal(JPanel telas, JFrame janela) 
+    {
         super(telas, janela);
 
         this.setLayout(null);
