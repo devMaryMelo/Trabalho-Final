@@ -25,10 +25,10 @@ public class TelaPrincipal extends PanelPrincipal
 
         this.setLayout(null);
 
-        String [] colunas = {"Nome", "Idade", "Genero"};
+        String [] colunas = {"Produto", "Descrição", "Preço"};
         
-        String[][] dados = {{"Maria", "19", "Feminino"},
-                            {"Jose", "20", "Masculino"}};
+        String[][] dados = {{"Café Preto", "1 xícara de café sem adição de açúcar", "R$2,00"},
+                            {"Cookie", "Biscoito amanteigado com gotas de chocolate", "R$5,00"}};
         
         JTable table = new JTable(dados, colunas);
         table.setBounds(15, 150, 270, 500);
