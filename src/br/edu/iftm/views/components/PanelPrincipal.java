@@ -3,6 +3,8 @@ package br.edu.iftm.views.components;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+import br.edu.iftm.views.TelaPrincipal;
+
 import java.awt.event.*;
 import java.awt.CardLayout;
 import java.awt.*;
@@ -34,6 +36,7 @@ public class PanelPrincipal extends JPanel implements ActionListener
             public void mouseClicked(MouseEvent e)
             {
                 janela.dispose();
+                TelaPrincipal.getCardapio().dispose();
             }
         });
         
