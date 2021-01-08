@@ -14,46 +14,34 @@ import java.awt.event.*;
 import java.awt.CardLayout;
 import java.awt.Cursor;
 import java.awt.Dimension;
+import java.awt.Image;
 import java.awt.Color;
 import java.awt.Container;
 
-public class TelaPrincipal extends PanelPrincipal 
-{
+public class TelaPrincipal extends PanelPrincipal {
     private JPanel telas;
     private CardLayout controlador;
 
-    public TelaPrincipal(JPanel telas, JFrame janela) 
-    {
+    public TelaPrincipal(JPanel telas, JFrame janela) {
         super(telas, janela);
 
         this.setLayout(null);
-
-        /*String [] colunas = {"Produto", "Preço"};
         
-        String[][] dados = { 
-                                {"Café Preto", "R$2,00"}, 
-                                {"Capuccino", "R$6,50"},
-                                {"Cookie", "R$5,00"},
-                            };
-        
-        JTable cardapio = new JTable(dados, colunas); 
-
-        JScrollPane scrollPane = new JScrollPane(cardapio);
-        scrollPane.setBounds(10, 200, 250, 400);
-        this.add(scrollPane);*/
-         
         Imagem background = new Imagem("background.jpg");
         background.setBounds(0, 0, 1440, 900);
-        
+
         Imagem btnLogout = new Imagem("logoutwhite.png");
         btnLogout.setBounds(7, 0, 64, 64);
         btnLogout.setToolTipText("Logout");
         btnLogout.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        
+
         Imagem btnCardapio = new Imagem("cardapio.png");
         btnCardapio.setBounds(50, 13, 36, 36);
         btnCardapio.setToolTipText("Cardápio");
         btnCardapio.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        Imagem imgCardapio = new Imagem("imgCardapio.png");
+        imgCardapio.setBounds(0, 0, 1545, 2000);
         
         this.add(btnCardapio);
         this.add(btnLogout);
@@ -72,7 +60,9 @@ public class TelaPrincipal extends PanelPrincipal
             public void mouseClicked(MouseEvent e) 
             {
                 JFrame janela = new JFrame("Cardápio");
-                janela.setBounds(70, 50, 400, 500);
+                janela.setBounds(70, 50, 415, 550);
+                janela.add(imgCardapio);
+                janela.setResizable(false);
                 janela.setVisible(true);
             }
         });
