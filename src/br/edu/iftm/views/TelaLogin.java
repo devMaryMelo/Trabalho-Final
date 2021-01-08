@@ -61,7 +61,9 @@ public class TelaLogin extends PanelPrincipal
                 String usuario = txtUsuario.getText();
                 String senha = new String(password.getPassword());
 
-                if((usuario == null) || (usuario.isEmpty()) || (senha.isEmpty()))
+                trocarTela("Principal");
+
+                /*if((usuario == null) || (usuario.isEmpty()) || (senha.isEmpty()))
                 {
                     JOptionPane.showMessageDialog(null, "Informe o usuário e a senha", "Dados inválidos", 
                                                     JOptionPane.ERROR_MESSAGE);
@@ -77,7 +79,7 @@ public class TelaLogin extends PanelPrincipal
                         JOptionPane.showMessageDialog(null, "Usuário ou senha incorretos", "Dados inválidos", 
                                                     JOptionPane.ERROR_MESSAGE);
                     }
-                }
+                }*/
             }
         });
     }
