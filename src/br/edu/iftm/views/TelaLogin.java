@@ -10,6 +10,7 @@ import javax.swing.JTextField;
 import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.event.*;
+import java.awt.CardLayout;
 
 import br.edu.iftm.views.components.Botao;
 import br.edu.iftm.views.components.Imagem;
@@ -18,6 +19,8 @@ import br.edu.iftm.views.components.PanelPrincipal;
 public class TelaLogin extends PanelPrincipal
 {
     private Botao btnLogin;
+    private JPanel telas;
+    private CardLayout controlador;
 
     public TelaLogin(JPanel telas, JFrame janela)
     {
@@ -57,13 +60,14 @@ public class TelaLogin extends PanelPrincipal
         btnLogin.addActionListener(new ActionListener()
         {
             @Override
-            public void actionPerformed(ActionEvent e) {
+            public void actionPerformed(ActionEvent e) 
+            {
                 String usuario = txtUsuario.getText();
                 String senha = new String(password.getPassword());
 
                 trocarTela("Principal");
 
-                /*if((usuario == null) || (usuario.isEmpty()) || (senha.isEmpty()))
+                if((usuario == null) || (usuario.isEmpty()) || (senha.isEmpty()))
                 {
                     JOptionPane.showMessageDialog(null, "Informe o usuário e a senha", "Dados inválidos", 
                                                     JOptionPane.ERROR_MESSAGE);
@@ -79,7 +83,7 @@ public class TelaLogin extends PanelPrincipal
                         JOptionPane.showMessageDialog(null, "Usuário ou senha incorretos", "Dados inválidos", 
                                                     JOptionPane.ERROR_MESSAGE);
                     }
-                }*/
+                }
             }
         });
     }
