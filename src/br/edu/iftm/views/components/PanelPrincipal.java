@@ -3,8 +3,6 @@ package br.edu.iftm.views.components;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import br.edu.iftm.views.components.Imagem;
-
 import java.awt.event.*;
 import java.awt.CardLayout;
 import java.awt.*;
