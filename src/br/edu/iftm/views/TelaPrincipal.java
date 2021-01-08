@@ -2,10 +2,6 @@ package br.edu.iftm.views;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTable;
-import javax.swing.WindowConstants;
-import javax.swing.table.DefaultTableModel;
 
 import br.edu.iftm.views.components.Imagem;
 import br.edu.iftm.views.components.PanelPrincipal;
@@ -13,10 +9,6 @@ import br.edu.iftm.views.components.PanelPrincipal;
 import java.awt.event.*;
 import java.awt.CardLayout;
 import java.awt.Cursor;
-import java.awt.Dimension;
-import java.awt.Image;
-import java.awt.Color;
-import java.awt.Container;
 
 public class TelaPrincipal extends PanelPrincipal {
     private JPanel telas;
