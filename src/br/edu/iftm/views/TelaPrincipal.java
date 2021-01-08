@@ -1,12 +1,10 @@
 package br.edu.iftm.views;
 
-import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
-import javax.swing.table.DefaultTableModel;
 
 import br.edu.iftm.views.components.Imagem;
 import br.edu.iftm.views.components.PanelPrincipal;
@@ -53,14 +51,18 @@ public class TelaPrincipal extends PanelPrincipal {
         this.add(txtProduto);
         this.add(txtPreco);
 
-        btnLogout.addMouseListener(new MouseAdapter() {
-            public void mouseClicked(MouseEvent e) {
+        btnLogout.addMouseListener(new MouseAdapter() 
+        {
+            public void mouseClicked(MouseEvent e) 
+            {
                 trocarTela("Login");
             }
         });
 
-        btnCardapio.addMouseListener(new MouseAdapter() {
-            public void mouseClicked(MouseEvent e) {
+        btnCardapio.addMouseListener(new MouseAdapter() 
+        {
+            public void mouseClicked(MouseEvent e) 
+            {
                 cardapio = new JFrame("Cardápio");
                 cardapio.setBounds(70, 50, 415, 550);
                 cardapio.add(imgCardapio);
