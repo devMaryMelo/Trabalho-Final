@@ -9,7 +9,7 @@ import java.awt.event.*;
 import java.awt.CardLayout;
 import java.awt.*;
 
-public class PanelPrincipal extends JPanel implements ActionListener
+public class PanelPrincipal extends JPanel
 {
     private JPanel telas;
     private CardLayout controlador;
@@ -50,17 +50,6 @@ public class PanelPrincipal extends JPanel implements ActionListener
 
         this.add(btnClose);
         this.add(btnMinimize);
-    }
-
-    @Override
-    public void actionPerformed(ActionEvent e)
-    {
-        executarBotao(e);
-    }
-
-    protected void executarBotao(ActionEvent e)
-    {
-
     }
     
     protected void trocarTela(String identificador)
