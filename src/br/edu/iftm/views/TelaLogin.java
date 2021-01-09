@@ -25,6 +25,7 @@ public class TelaLogin extends PanelPrincipal
     public TelaLogin(JPanel telas, JFrame janela)
     {
         super(telas, janela);
+
         JLabel lblUsuario = new JLabel("Usuário");
         lblUsuario.setForeground(Color.WHITE);
         lblUsuario.setBounds(630, 300, 100, 20);
@@ -40,7 +41,6 @@ public class TelaLogin extends PanelPrincipal
         password.setBounds(630, 370, 200, 20);
 
         Botao btnLogin = new Botao("Login");
-        btnLogin.addActionListener(this);
         btnLogin.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
         Imagem imgCafeteria = new Imagem("cafeteria.png");
