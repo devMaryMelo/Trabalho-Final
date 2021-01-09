@@ -4,3 +4,4 @@ Tem como objetivo utilizar os conhecimentos obtidos em desenvolvimento de interf
 Um simples programa que simula o software de uma cafeteria voltado para o cliente efetuar pedidos, possui uma tela de Login e uma tela principal para cadastro de pedidos.
 ## Autores
 - Mariana Melo
+- Thiago Alcântara
