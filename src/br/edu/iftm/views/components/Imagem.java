@@ -5,6 +5,7 @@ import javax.swing.JLabel;
 
 public class Imagem extends JLabel
 {
+    //Método construtor
     public Imagem(String nome)
     {
         super();
