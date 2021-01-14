@@ -5,6 +5,7 @@ import java.awt.*;
 
 public class Botao extends JButton
 {
+    //Método Construtor
     public Botao(String texto)
     {
         super(texto);
